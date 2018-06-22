@@ -1,1 +1,1 @@
-My code from differen coding practice websites
+My code from different coding practice websites
