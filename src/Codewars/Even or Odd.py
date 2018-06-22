@@ -1,0 +1,1 @@
+even_or_odd=lambda x:"Odd" if x%2 else "Even"
