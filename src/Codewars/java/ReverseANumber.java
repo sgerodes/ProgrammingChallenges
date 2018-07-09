@@ -1,4 +1,4 @@
-package Codewars;
+package Codewars.java;
 
 public class ReverseANumber {
 
