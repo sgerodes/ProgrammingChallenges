@@ -1,12 +1,12 @@
-var crack = function(safe) {
+var crack = function (safe) {
     code = ""
     unlocking = "click"
-    for (let i = 0; i < 3; ++i){
-        for (let i = 0; i < 100; ++i){
+    for (let i = 0; i < 3; ++i) {
+        for (let i = 0; i < 100; ++i) {
             let num = i < 10 ? "0" + i : i;
-            for (let direction of ["L", "R"]){
+            for (let direction of ["L", "R"]) {
                 comb = direction + num;
-                if (safe.unlock(code + comb) == unlocking){
+                if (safe.unlock(code + comb) == unlocking) {
                     code += comb;
                 }
             }
