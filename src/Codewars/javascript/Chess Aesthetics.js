@@ -12,7 +12,7 @@ function get_without_every_piece(fen) {
 
 function subtituteOnePiece(fen, index) {
     function isNumeric(str) {
-        return !isNaN(str);
+        return str === ' '? false : !isNaN(str);
     }
     let isLeftNumber = isNumeric(fen[index - 1]);
     let isRightNumber = isNumeric(fen[index + 1]);
