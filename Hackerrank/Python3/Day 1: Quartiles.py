@@ -18,4 +18,6 @@ for x in X:
         X_2.append(x)
 Q1 = findQuartile(X_1)
 Q3 = findQuartile(X_2)
-print(Q1, Q2, Q3, sep='\n')
+print(Q1)
+print(Q2)
+print(Q3)
