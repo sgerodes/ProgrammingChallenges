@@ -2,9 +2,7 @@ import os
 
 
 def gradingStudents(grades):
-    return map(
-        lambda x: x if x < 38 else x + 1 if x % 10 == 9 or x % 10 == 4 else x + 2 if x % 10 == 8 or x % 10 == 3 else x,
-        grades)
+    return map(lambda x: x if x < 38 or x % 5 < 3 else x + 1 if x % 5 == 4 else x + 2, grades)
 
 
 if __name__ == '__main__':
