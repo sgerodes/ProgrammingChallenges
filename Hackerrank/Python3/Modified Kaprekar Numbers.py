@@ -5,7 +5,7 @@ def kaprekarNumbers(p, q):
 def is_kaprekar(num):
     s = str(num ** 2)
     l = len(s) // 2
-    return int(s[:l] if l > 0 else 0) + int(s[l:]) == num
+    return int(s[:l] or 0) + int(s[l:]) == num
 
 
 if __name__ == '__main__':
