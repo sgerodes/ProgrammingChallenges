@@ -1,15 +1,17 @@
 import os
+
+
 def stringSimilarity(s):
     n = len(s)
     z = [None] * n
-    z [0] = n
+    z[0] = n
     L, R = 0, 0
     for i in range(1, n):
         if i > R:
             L = R = i
-            while R < n and s[R-L] == s[R]:
+            while R < n and s[R - L] == s[R]:
                 R += 1
-            z[i] = R-L
+            z[i] = R - L
             R -= 1
         else:
             k = i - L
@@ -17,11 +19,12 @@ def stringSimilarity(s):
                 z[i] = z[k]
             else:
                 L = i
-                while R < n and s[R-L] == s[R]:
+                while R < n and s[R - L] == s[R]:
                     R += 1
-                z[i] = R-L
+                z[i] = R - L
                 R -= 1
     return sum(z)
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
@@ -36,4 +39,3 @@ if __name__ == '__main__':
         fptr.write(str(result) + '\n')
 
     fptr.close()
-
